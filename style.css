@@ -181,3 +181,38 @@ header nav a:hover{
     background-color:var(--color-accent);
     transform:translateY(-2px);
 }
+
+/* お店のこだわり */
+.our-philosophy{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:32px;
+}
+
+.our-philosophy h2{
+    grid-column:1 / -1;
+    margin-bottom:8px;
+}
+
+.philosophy-item{
+    padding:28px 24px;
+    border-top:4px solid var(--color-main);
+    border-radius:8px;
+    background-color:var(--color-light);
+}
+
+.philosophy-item h3{
+    margin:0 0 8px;
+    font-size:1.2rem;
+    color:var(--color-main);
+}
+
+.philosophy-item p{
+    margin:0;
+}
+
+.our-philosophy .btn{
+    grid-column:1 / -1;
+    justify-self:center;
+    margin-top:16px;
+}
