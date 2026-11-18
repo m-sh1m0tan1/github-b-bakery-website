@@ -286,3 +286,25 @@ header nav a:hover{
 .store-information dd:last-of-type{
     border-bottom:none;
 }
+
+/* フッター */
+footer{
+    padding:40px 20px 24px;
+    background-color:var(--color-main);
+    color:#fff;
+    text-align:center;
+}
+
+footer p{
+    margin:0;
+}
+
+footer p:first-child{
+    margin-bottom:16px;
+    font-family:"Klee One", serif;
+    font-size:1.4rem;
+}
+
+footer small{
+    opacity:0.8;
+}
