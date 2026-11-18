@@ -1,8 +1,56 @@
 @charset "utf-8";
+:root{
+    --color-base:#fffaf3;   /* 背景（生成り色） */
+    --color-main:#5b7a4a;   /* メイン（森の緑） */
+    --color-accent:#c8a165; /* アクセント（小麦色） */
+    --color-light:#eef2e6;  /* 薄い緑 */
+    --color-text:#4a3a2a;   /* 文字（こげ茶） */
+}
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
 body{
-    font-family:"Kiwi Maru", sans-serif
+    font-family:"Kiwi Maru", sans-serif;
+    margin:0;
+    background-color:var(--color-base);
+    color:var(--color-text);
+    line-height:1.8;
 }
 
 h1, h2, h3{
     font-family:"Klee One", serif
+}
+
+:root{
+    --color-base:#fffaf3;   /* 背景（生成り色） */
+    --color-main:#5b7a4a;   /* メイン（森の緑） */
+    --color-text:#4a3a2a;   /* 文字（こげ茶） */
+}
+
+body{
+    margin:0;
+    background-color:var(--color-base);
+    color:var(--color-text);
+    line-height:1.8;
+}
+
+img{
+    max-width:100%;   /* 画像が画面からはみ出さないように */
+}
+
+a{
+    color:inherit;    /* リンクの文字色を周りと同じに */
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
 }
