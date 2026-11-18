@@ -165,3 +165,19 @@ header nav a:hover{
     margin:0 24px 24px;
     font-size:0.95rem;
 }
+
+/* ボタン */
+.btn{
+    display:inline-block;
+    padding:12px 40px;
+    border-radius:999px;
+    background-color:var(--color-main);
+    color:#fff;
+    text-decoration:none;
+    transition:background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover{
+    background-color:var(--color-accent);
+    transform:translateY(-2px);
+}
