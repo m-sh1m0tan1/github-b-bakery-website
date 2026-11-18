@@ -126,3 +126,42 @@ header nav a:hover{
     font-size:2rem;
     color:var(--color-main);
 }
+
+/* 商品紹介 */
+.product-introduction{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:32px;
+}
+
+.product-introduction h2{
+    grid-column:1 / -1;
+    margin-bottom:8px;
+}
+
+.product{
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border-radius:16px;
+    background-color:#fff;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.product img{
+    order:-1; /* HTMLでは見出しの後ろにある画像を、カードの一番上に表示する */
+    width:100%;
+    aspect-ratio:4 / 3;
+    object-fit:cover;
+}
+
+.product h3{
+    margin:20px 24px 4px;
+    font-size:1.25rem;
+    color:var(--color-main);
+}
+
+.product p{
+    margin:0 24px 24px;
+    font-size:0.95rem;
+}
