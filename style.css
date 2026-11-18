@@ -216,3 +216,36 @@ header nav a:hover{
     justify-self:center;
     margin-top:16px;
 }
+
+/* お知らせ */
+.notice{
+    max-width:800px;
+}
+
+.notice-item{
+    display:flex;
+    align-items:baseline;
+    gap:32px;
+    padding:20px 8px;
+    border-bottom:1px solid #e3d9c8;
+    text-decoration:none;
+    transition:background-color 0.3s;
+}
+
+.notice-item:first-of-type{
+    border-top:1px solid #e3d9c8;
+}
+
+.notice-item:hover{
+    background-color:var(--color-light);
+}
+
+.notice-item time{
+    flex-shrink:0;
+    color:var(--color-accent);
+}
+
+.notice-item h3{
+    margin:0;
+    font-size:1rem;
+}
