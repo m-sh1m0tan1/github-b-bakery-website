@@ -106,3 +106,23 @@ header nav a:hover{
     min-height:320px;
     object-fit:cover;
 }
+
+/* トップページのセクション共通 */
+.product-introduction,
+.our-philosophy,
+.notice,
+.store-information{
+    max-width:1080px;
+    margin:0 auto;
+    padding:72px 20px;
+}
+
+.product-introduction h2,
+.our-philosophy h2,
+.notice h2,
+.store-information h2{
+    margin:0 0 40px;
+    text-align:center;
+    font-size:2rem;
+    color:var(--color-main);
+}
