@@ -7,35 +7,40 @@
     --color-text:#4a3a2a;   /* 文字（こげ茶） */
 }
 
-*,
-*::before,
-*::after{
-    box-sizing:border-box;
-}
-
 body{
     font-family:"Kiwi Maru", sans-serif;
-    margin:0;
-    background-color:var(--color-base);
-    color:var(--color-text);
-    line-height:1.8;
 }
 
 h1, h2, h3{
     font-family:"Klee One", serif
 }
 
-img{
+/* ===== ここから下はトップページ（body.top-page）専用 ===== */
+
+.top-page *,
+.top-page *::before,
+.top-page *::after{
+    box-sizing:border-box;
+}
+
+.top-page{
+    margin:0;
+    background-color:var(--color-base);
+    color:var(--color-text);
+    line-height:1.8;
+}
+
+.top-page img{
     max-width:100%;
     display:block;
 }
 
-a{
+.top-page a{
     color:inherit;
 }
 
-/* ヘッダー（全ページ共通） */
-header{
+/* ヘッダー */
+.top-page header{
     position:sticky;
     top:0;
     z-index:100;
@@ -49,37 +54,37 @@ header{
     box-shadow:0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-header h1{
+.top-page header h1{
     margin:0;
     font-size:1.6rem;
     color:var(--color-main);
 }
 
-header nav,
-header nav ul{
+.top-page header nav,
+.top-page header nav ul{
     display:flex;
     flex-wrap:wrap;
     gap:4px 24px;
 }
 
-header nav ul{
+.top-page header nav ul{
     margin:0;
     padding:0;
     list-style:none;
 }
 
-header nav a{
+.top-page header nav a{
     text-decoration:none;
     white-space:nowrap;
     transition:color 0.3s;
 }
 
-header nav a:hover{
+.top-page header nav a:hover{
     color:var(--color-accent);
 }
 
 /* メインビジュアル */
-.main-visual img{
+.top-page .main-visual img{
     width:100%;
     height:60vh;
     min-height:320px;
@@ -87,19 +92,19 @@ header nav a:hover{
 }
 
 /* トップページのセクション共通 */
-.product-introduction,
-.our-philosophy,
-.notice,
-.store-information{
+.top-page .product-introduction,
+.top-page .our-philosophy,
+.top-page .notice,
+.top-page .store-information{
     max-width:1080px;
     margin:0 auto;
     padding:72px 20px;
 }
 
-.product-introduction h2,
-.our-philosophy h2,
-.notice h2,
-.store-information h2{
+.top-page .product-introduction h2,
+.top-page .our-philosophy h2,
+.top-page .notice h2,
+.top-page .store-information h2{
     margin:0 0 40px;
     text-align:center;
     font-size:2rem;
@@ -107,18 +112,18 @@ header nav a:hover{
 }
 
 /* 商品紹介 */
-.product-introduction{
+.top-page .product-introduction{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:32px;
 }
 
-.product-introduction h2{
+.top-page .product-introduction h2{
     grid-column:1 / -1;
     margin-bottom:8px;
 }
 
-.product{
+.top-page .product{
     display:flex;
     flex-direction:column;
     overflow:hidden;
@@ -127,26 +132,26 @@ header nav a:hover{
     box-shadow:0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.product img{
+.top-page .product img{
     order:-1; /* HTMLでは見出しの後ろにある画像を、カードの一番上に表示する */
     width:100%;
     aspect-ratio:4 / 3;
     object-fit:cover;
 }
 
-.product h3{
+.top-page .product h3{
     margin:20px 24px 4px;
     font-size:1.25rem;
     color:var(--color-main);
 }
 
-.product p{
+.top-page .product p{
     margin:0 24px 24px;
     font-size:0.95rem;
 }
 
 /* ボタン */
-.btn{
+.top-page .btn{
     display:inline-block;
     padding:12px 40px;
     border-radius:999px;
@@ -156,52 +161,52 @@ header nav a:hover{
     transition:background-color 0.3s, transform 0.3s;
 }
 
-.btn:hover{
+.top-page .btn:hover{
     background-color:var(--color-accent);
     transform:translateY(-2px);
 }
 
 /* お店のこだわり */
-.our-philosophy{
+.top-page .our-philosophy{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:32px;
 }
 
-.our-philosophy h2{
+.top-page .our-philosophy h2{
     grid-column:1 / -1;
     margin-bottom:8px;
 }
 
-.philosophy-item{
+.top-page .philosophy-item{
     padding:28px 24px;
     border-top:4px solid var(--color-main);
     border-radius:8px;
     background-color:var(--color-light);
 }
 
-.philosophy-item h3{
+.top-page .philosophy-item h3{
     margin:0 0 8px;
     font-size:1.2rem;
     color:var(--color-main);
 }
 
-.philosophy-item p{
+.top-page .philosophy-item p{
     margin:0;
 }
 
-.our-philosophy .btn{
+.top-page .our-philosophy .btn{
     grid-column:1 / -1;
     justify-self:center;
     margin-top:16px;
 }
 
 /* お知らせ */
-.notice{
+.top-page .notice{
     max-width:800px;
 }
 
-.notice-item{
+.top-page .notice-item{
     display:flex;
     align-items:baseline;
     gap:32px;
@@ -211,34 +216,34 @@ header nav a:hover{
     transition:background-color 0.3s;
 }
 
-.notice-item:first-of-type{
+.top-page .notice-item:first-of-type{
     border-top:1px solid #e3d9c8;
 }
 
-.notice-item:hover{
+.top-page .notice-item:hover{
     background-color:var(--color-light);
 }
 
-.notice-item time{
+.top-page .notice-item time{
     flex-shrink:0;
     color:var(--color-accent);
 }
 
-.notice-item h3{
+.top-page .notice-item h3{
     margin:0;
     font-size:1rem;
 }
 
 /* 店舗情報 */
-.store-information{
+.top-page .store-information{
     max-width:800px;
 }
 
-.store-information address{
+.top-page .store-information address{
     font-style:normal; /* addressタグの斜体を解除 */
 }
 
-.store-information dl{
+.top-page .store-information dl{
     display:grid;
     grid-template-columns:120px 1fr;
     margin:0;
@@ -248,42 +253,42 @@ header nav a:hover{
     box-shadow:0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.store-information dt,
-.store-information dd{
+.top-page .store-information dt,
+.top-page .store-information dd{
     margin:0;
     padding:16px 24px;
     border-bottom:1px solid #eee5d6;
 }
 
-.store-information dt{
+.top-page .store-information dt{
     font-weight:bold;
     color:var(--color-main);
     background-color:var(--color-light);
 }
 
-.store-information dt:last-of-type,
-.store-information dd:last-of-type{
+.top-page .store-information dt:last-of-type,
+.top-page .store-information dd:last-of-type{
     border-bottom:none;
 }
 
 /* フッター */
-footer{
+.top-page footer{
     padding:40px 20px 24px;
     background-color:var(--color-main);
     color:#fff;
     text-align:center;
 }
 
-footer p{
+.top-page footer p{
     margin:0;
 }
 
-footer p:first-child{
+.top-page footer p:first-child{
     margin-bottom:16px;
     font-family:"Klee One", serif;
     font-size:1.4rem;
 }
 
-footer small{
+.top-page footer small{
     opacity:0.8;
 }
