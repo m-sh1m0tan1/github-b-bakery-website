@@ -249,3 +249,40 @@ header nav a:hover{
     margin:0;
     font-size:1rem;
 }
+
+/* 店舗情報 */
+.store-information{
+    max-width:800px;
+}
+
+.store-information address{
+    font-style:normal; /* addressタグの斜体を解除 */
+}
+
+.store-information dl{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    margin:0;
+    border-radius:16px;
+    overflow:hidden;
+    background-color:#fff;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.store-information dt,
+.store-information dd{
+    margin:0;
+    padding:16px 24px;
+    border-bottom:1px solid #eee5d6;
+}
+
+.store-information dt{
+    font-weight:bold;
+    color:var(--color-main);
+    background-color:var(--color-light);
+}
+
+.store-information dt:last-of-type,
+.store-information dd:last-of-type{
+    border-bottom:none;
+}
