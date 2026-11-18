@@ -15,8 +15,6 @@ h1, h2, h3{
     font-family:"Klee One", serif
 }
 
-/* ===== ここから下はトップページ（body.top-page）専用 ===== */
-
 .top-page *,
 .top-page *::before,
 .top-page *::after{
