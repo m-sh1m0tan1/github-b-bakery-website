@@ -54,3 +54,47 @@ img{
 a{
     color:inherit;
 }
+
+/* ヘッダー（全ページ共通） */
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px 32px;
+    padding:12px 40px;
+    background-color:var(--color-base);
+    box-shadow:0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+header h1{
+    margin:0;
+    font-size:1.6rem;
+    color:var(--color-main);
+}
+
+header nav,
+header nav ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:4px 24px;
+}
+
+header nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+header nav a{
+    text-decoration:none;
+    white-space:nowrap;
+    transition:color 0.3s;
+}
+
+header nav a:hover{
+    color:var(--color-accent);
+}
